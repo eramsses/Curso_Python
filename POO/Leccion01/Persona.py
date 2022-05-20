@@ -35,6 +35,9 @@ class Persona:
     def mostrar_detalle(self):
         print(f"Nombre: {self.__nombre} {self.__apellido} {self.__edad} años")
 
+    def __del__(self):
+        print(f"Persona: {self.__nombre} {self.__apellido}")
+
 #Pruebas que se ejecutan solo si es desde la misma clase Persona
 if __name__ == "__main__":
     persona1 = Persona("Erick", "Rodríguez", 43)

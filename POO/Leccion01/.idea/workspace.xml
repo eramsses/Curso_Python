@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="145e50b4-f80e-4a9e-af38-d5d718faed4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PruebaPersonas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Persona.py" beforeDir="false" afterPath="$PROJECT_DIR$/Persona.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PruebaPersonas.py" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaPersonas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     "settings.editor.selected.configurable": "preferences.editor.code.editing"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.Persona">
+  <component name="RunManager" selected="Python.PruebaPersonas">
     <configuration name="Aritmetica" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Leccion01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Persona" />
         <item itemvalue="Python.PruebaPersonas" />
+        <item itemvalue="Python.Persona" />
         <item itemvalue="Python.Cubo" />
         <item itemvalue="Python.Rectangulo" />
         <item itemvalue="Python.Aritmetica" />
