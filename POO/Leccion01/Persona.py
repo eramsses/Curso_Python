@@ -3,8 +3,8 @@ class Persona:
     # constructor de la clase se llama __init_
     def __init__(self, nombre, apellido, edad):
         self.__nombre = nombre ## con __ se limita para que no se acceda desde afuera de la clase
-        self.apellido = apellido
-        self.edad = edad
+        self.__apellido = apellido
+        self.__edad = edad
 
     #Get set de una propiedad
     @property
@@ -15,9 +15,25 @@ class Persona:
     def nombre(self, nombre):
         self.__nombre = nombre
 
+    @property
+    def apellido(self):
+        return self.__apellido
+
+    @apellido.setter
+    def apellido(self, apellido):
+        self.__apellido = apellido
+
+    @property
+    def edad(self):
+        return self.__edad
+
+    @edad.setter
+    def edad(self, edad):
+        self.__edad = edad
+
     # Función para imprimir la información de la clase
     def mostrar_detalle(self):
-        print(f"Nombre: {self.__nombre} {self.apellido} {self.edad} años")
+        print(f"Nombre: {self.__nombre} {self.__apellido} {self.__edad} años")
 
 
 persona1 = Persona("Erick", "Rodríguez", 43)
