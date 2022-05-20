@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145e50b4-f80e-4a9e-af38-d5d718faed4d" name="Changes" comment="" />
+    <list default="true" id="145e50b4-f80e-4a9e-af38-d5d718faed4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Persona.py" beforeDir="false" afterPath="$PROJECT_DIR$/Persona.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
