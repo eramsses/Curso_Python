@@ -23,4 +23,12 @@ MiClase.variable_clase = "Cambió el valor de la variable de clase"
 print(miClase.variable_clase)
 print(miClase2.variable_clase)
 
+#creando variable de clase al vuelo
+MiClase.variable_clase2 = "Nueva variable de clase 2"
+
+#Acceso a la variable desde los dos objetos creados
+print(miClase.variable_clase2)
+print(miClase2.variable_clase2)
+
+
 
