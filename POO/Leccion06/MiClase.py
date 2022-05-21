@@ -7,8 +7,22 @@ class MiClase:
     def __init__(self, variable_instancia):
         self.variable_instancia = variable_instancia
 
+    #Métodos estaticos
+    @staticmethod
+    def metodo_estatico():
+        print(f"Desde el método estático: {MiClase.variable_clase}")
+
+    #Métodos de clase
+    @classmethod
+    def metodo_de_clase(cls):
+        print(f"Desde el método de clase: {cls.variable_clase}")
+
+MiClase.metodo_estatico()
+MiClase.metodo_de_clase()
 
 print(MiClase.variable_clase)
+
+
 
 miClase = MiClase("Valor de instancia")
 print(miClase.variable_instancia)
