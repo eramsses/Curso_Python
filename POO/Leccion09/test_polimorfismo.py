@@ -13,7 +13,7 @@ empleado = Empleado("Erick", 50000.00)
 
 imprimir_detalle(empleado)
 
-gerente = Gerente(empleado, "Planillas")
+gerente = Gerente(empleado, "Sistemas")
 
 imprimir_detalle(gerente)
 
