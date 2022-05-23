@@ -26,16 +26,19 @@ c1 = Computadora("HP", m3, t2, r2)
 c2 = Computadora("GAMER", m1, t3, r1)
 c3 = Computadora("Genérica", m3, t1, r2)
 
-computadoras1 = [c1, c2]
+computadoras1 = [c2]
+computadoras2 = [c2, c1, c3]
 
 o1 = Orden(computadoras1)
-
-print(o1)
+o2 = Orden(computadoras2)
 
 #Agregar una computadora nueva
 o1.agregar_computadora(c3)
 
 print(o1)
+print(o2)
+
+
 
 
 

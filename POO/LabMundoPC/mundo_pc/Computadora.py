@@ -51,7 +51,7 @@ class Computadora:
         self.__raton = r
 
     def __str__(self):
-        return f"{self.__nombre}: {self.__id_computadora}\n{self.monitor}\n{self.__teclado}\n{self.__raton}\n"
+        return f"{self.__nombre}: {self.__id_computadora}\n\t\t{self.monitor}\n\t\t{self.__teclado}\n\t\t{self.__raton}\n"
 
 
 if __name__ == "__main__":

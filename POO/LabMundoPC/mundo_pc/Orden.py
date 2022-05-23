@@ -23,7 +23,7 @@ class Orden:
     def __str__(self):
         str_computadoras = f"Orden: {self.__id_orden}, Computadoras:\n"
         for c in self.__computadoras:
-            str_computadoras += c.__str__()
+            str_computadoras += f"\t{c.__str__()}"
 
         return str_computadoras
 
