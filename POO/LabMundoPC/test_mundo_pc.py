@@ -1,12 +1,11 @@
-
-
-#Monitores
 from mundo_pc.Computadora import Computadora
 from mundo_pc.Monitor import Monitor
 from mundo_pc.Orden import Orden
 from mundo_pc.Raton import Raton
 from mundo_pc.Teclado import Teclado
 
+
+#Monitores
 m1 = Monitor("Asus", 27)
 m2 = Monitor("Dell", 21)
 m3 = Monitor("HP", 21)
