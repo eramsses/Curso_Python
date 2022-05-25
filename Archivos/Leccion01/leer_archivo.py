@@ -16,13 +16,16 @@ try:
     #for linea in archivo:
     #    print(linea)
 
-    print(archivo.readlines())
+    #print(archivo.readlines())
 
+    #Copiar archivo
+    archivo2 = open("copia.txt", "a", encoding="UTF8")
+    archivo2.write(archivo.read())
 
 except Exception as e:
     print(e)
 finally:
     archivo.close()
-
+    archivo2.close()
 
 
