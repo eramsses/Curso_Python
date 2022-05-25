@@ -1,7 +1,7 @@
 
 try:
     archivo = open("prueba.txt", "r", encoding="UTF8")
-    print(archivo.read())
+    #print(archivo.read())
 
     #leer algunos caracteres
     #print(archivo.read(5))
@@ -10,7 +10,13 @@ try:
 
     #leer linea completa
 
-    print(archivo.readline())
+    #print(archivo.readline())
+
+    #iterar lineas del archivo
+    #for linea in archivo:
+    #    print(linea)
+
+    print(archivo.readlines())
 
 
 except Exception as e:
