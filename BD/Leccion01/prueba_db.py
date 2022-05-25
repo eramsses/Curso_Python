@@ -8,19 +8,25 @@ conexion = psycopg2.connect(
     database="test_db")
 
 try:
-    cursor = conexion.cursor()
-    sentencia = "INSERT INTO personas(nombre, apellido, email) VALUES(%s, %s, %s)"
-    valores = ("Alejandra", "Rodriguez", "arodriguez@yopmail.com")
-    cursor.execute(sentencia, valores)
-    conexion.commit()
+    with conexion.cursor() as cursor:
+        sentencia = "INSERT INTO personas(nombre, apellido, email) VALUES(%s, %s, %s)"
+        valores = (
+            ("Marco", "Flores", "mflores@yopmail.com"),
+            ("Angel", "Martinez", "amartinez@yopmail.com"),
+            ("Maria", "Gonzalez", "arodriguez@yopmail.com")
+        )
 
-    registros_insertados = cursor.rowcount
-    print(f"Registros insertados: {registros_insertados}")
+        #cursor.execute(sentencia, valores)
+        cursor.executemany(sentencia, valores)
+        conexion.commit() #no se usa si está dentro del with
+
+        registros_insertados = cursor.rowcount
+        print(f"Registros insertados: {registros_insertados}")
 
 except Exception as e:
     print(e)
 finally:
-    cursor.close()
+    #cursor.close() #se cierra por el with
     conexion.close()
 
 
