@@ -9,14 +9,18 @@ conexion = psycopg2.connect(
 
 try:
     cursor = conexion.cursor()
-    sentencia = "SELECT * FROM personas WHERE id_persona = %s"
-    id_persona = input("Ingrese el valor id_persona: ")
-    cursor.execute(sentencia, (id_persona,))
+    #sentencia = "SELECT * FROM personas WHERE id_persona IN (1,2)"
+    #dinamico
+    sentencia = "SELECT * FROM personas WHERE id_persona IN (1,2)"
+    llaves_primarias = input("Ingrese el valor id_persona: ")
+    #llaves_primarias = ((1,2),)
+    cursor.execute(sentencia, (llaves_primarias,))
+    #cursor.execute(sentencia)
 
-    #registros = cursor.fetchall()
-    registros = cursor.fetchone()
-
-    print(registros)
+    registros = cursor.fetchall()
+    #registros = cursor.fetchone()
+    for r in registros:
+        print(r)
 except Exception as e:
     print(e)
 finally:
