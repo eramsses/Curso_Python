@@ -9,18 +9,14 @@ conexion = psycopg2.connect(
 
 try:
     cursor = conexion.cursor()
-    #sentencia = "SELECT * FROM personas WHERE id_persona IN (1,2)"
-    #dinamico
-    sentencia = "SELECT * FROM personas WHERE id_persona IN (1,2)"
-    llaves_primarias = input("Ingrese el valor id_persona: ")
-    #llaves_primarias = ((1,2),)
-    cursor.execute(sentencia, (llaves_primarias,))
-    #cursor.execute(sentencia)
+    sentencia = "INSERT INTO personas(nombre, apellido, email) VALUES(%s, %s, %s)"
+    valores = ("Alejandra", "Rodriguez", "arodriguez@yopmail.com")
+    cursor.execute(sentencia, valores)
+    conexion.commit()
 
-    registros = cursor.fetchall()
-    #registros = cursor.fetchone()
-    for r in registros:
-        print(r)
+    registros_insertados = cursor.rowcount
+    print(f"Registros insertados: {registros_insertados}")
+
 except Exception as e:
     print(e)
 finally:
