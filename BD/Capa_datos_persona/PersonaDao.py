@@ -1,7 +1,9 @@
 # DAO Data Access Object
 from Conexion import Conexion
 from Persona import Persona
+from cursor_del_pool import CursorDelPool
 from logger_base import log
+
 
 class PersonaDAO:
     '''
@@ -17,47 +19,43 @@ class PersonaDAO:
 
     @classmethod
     def seleccionar(cls):
-        with Conexion.get_connection() as conexion:
-            with conexion.cursor() as cursor:
-                cursor.execute(cls._SELECCIONAR)
+        with CursorDelPool() as cursor:
+            cursor.execute(cls._SELECCIONAR)
 
-                registros = cursor.fetchall()
-                personas = []
-                for registro in registros:
-                    persona = Persona(registro[0], registro[1], registro[2], registro[3])
-                    personas.append(persona)
-            return personas
+            registros = cursor.fetchall()
+            personas = []
+            for registro in registros:
+                persona = Persona(registro[0], registro[1], registro[2], registro[3])
+                personas.append(persona)
+        return personas
 
     @classmethod
     def insertar(cls, persona):
-        with Conexion.get_connection() as conexion:
-            with conexion.cursor() as cursor:
-                log.debug(f"Persona a insertar: {persona}")
-                valores = (persona.nombre, persona.apellido, persona.email)
-                cursor.execute(cls._INSERTAR, valores)
+        with CursorDelPool() as cursor:
+            log.debug(f"Persona a insertar: {persona}")
+            valores = (persona.nombre, persona.apellido, persona.email)
+            cursor.execute(cls._INSERTAR, valores)
 
-                log.debug(f"Persona insertada: {persona}")
-                return cursor.rowcount
+            log.debug(f"Persona insertada: {persona}")
+            return cursor.rowcount
 
     @classmethod
     def actualizar(cls, persona):
-        with Conexion.get_connection():
-            with Conexion.get_cursor() as cursor:
-                valores = (persona.nombre, persona.apellido, persona.email, persona.id_persona)
-                cursor.execute(cls._ACTUALIZAR, valores)
-                log.debug(f"Persona actualizada: {persona}")
-                return cursor.rowcount
+        with CursorDelPool() as cursor:
+            valores = (persona.nombre, persona.apellido, persona.email, persona.id_persona)
+            cursor.execute(cls._ACTUALIZAR, valores)
+            log.debug(f"Persona actualizada: {persona}")
+            return cursor.rowcount
 
     @classmethod
     def eliminar(cls, persona):
-        with Conexion.get_connection() as conexion:
-            with conexion.cursor() as cursor:
-                log.debug(f"Persona a eliminar: {persona}")
-                valores = (persona.id_persona,)
-                cursor.execute(cls._ELIMINAR, valores)
+        with CursorDelPool() as cursor:
+            log.debug(f"Persona a eliminar: {persona}")
+            valores = (persona.id_persona,)
+            cursor.execute(cls._ELIMINAR, valores)
 
-                log.debug(f"Persona eliminada: {persona}")
-                return cursor.rowcount
+            log.debug(f"Persona eliminada: {persona}")
+            return cursor.rowcount
 
 
 
@@ -68,14 +66,14 @@ if __name__ == "__main__":
     #log.debug(f"Personas insertadas: {personas_insertadas}")
 
     #Actulizar un registro
-    #p2 = Persona(1, "Marco Antonio", "Flores Artica", "mflores@yopmail.com")
-    #personas_actualizadas = PersonaDAO.actualizar(p2)
-    #log.debug(f"Personas actualizadas: {personas_actualizadas}")
+    p2 = Persona(1, "Marco Antonio", "Flores Artica", "mflores@yopmail.com")
+    personas_actualizadas = PersonaDAO.actualizar(p2)
+    log.debug(f"Personas actualizadas: {personas_actualizadas}")
 
     #Eliminar un registro
-    p3 = Persona(id_persona=6)
-    personas_eliminadas = PersonaDAO.eliminar(p3)
-    log.debug(f"Personas eliminadas: {personas_eliminadas}")
+    #p3 = Persona(id_persona=6)
+    #personas_eliminadas = PersonaDAO.eliminar(p3)
+    #log.debug(f"Personas eliminadas: {personas_eliminadas}")
 
 
     personas = PersonaDAO.seleccionar()
