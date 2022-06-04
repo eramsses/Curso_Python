@@ -1,7 +1,6 @@
 import sys
-
 from logger_base import log
-import psycopg2 as db
+from psycopg2 import pool
 
 class Conexion:
     __DATABASE = "test_db"
@@ -9,42 +8,36 @@ class Conexion:
     __PASWORD = "michelle"
     __DB_PORT = "5432"
     __HOST = "127.0.0.1"
-    __conexion = None
-    _cursor = None
+    __MIN_CON = 1
+    __MAX_CON = 5
+    _pool = None
+
+    @classmethod
+    def get_pool(cls):
+        if cls._pool is None:
+            try:
+                cls._pool = pool.SimpleConnectionPool(cls.__MIN_CON, cls.__MAX_CON,
+                                                      host=cls.__HOST,
+                                                      user=cls.__USERNAME,
+                                                      password=cls.__PASWORD,
+                                                      port=cls.__DB_PORT,
+                                                      database=cls.__DATABASE)
+                log.debug(f"Creación del pool exitosa: {cls._pool}")
+                return cls._pool
+
+            except Exception as e:
+                log.error(f"Ocurrió un error al obtener el pool: {e}")
+                sys.exit()
+        else:
+            return cls._pool
+
 
     @classmethod
     def get_connection(cls):
-        if(cls.__conexion is None):
-            try:
-                cls.__conexion = db.connect(host=cls.__HOST,
-                                            user= cls.__USERNAME,
-                                            password=cls.__PASWORD,
-                                            port=cls.__DB_PORT,
-                                            database=cls.__DATABASE)
+        pass
 
-                log.debug(f"Conexión exitosa: {cls.__conexion}")
-                return cls.__conexion
-            except Exception as e:
-                log.error(f"Ocurrió un error al establecer conexión: {e}")
-                sys.exit()
-        else:
-            return cls.__conexion
-
-    @classmethod
-    def get_cursor(cls):
-        if cls._cursor == None:
-            try:
-                cls._cursor = cls.get_connection().cursor()
-                log.debug(f"Se abrió correctamente el cursor: {cls._cursor}")
-                return cls._cursor
-            except Exception as e:
-                log.error(f"Ocurrió un error al obtener el cursor: {e}")
-
-        else:
-            return cls._cursor
 
 if __name__ == "__main__":
-    Conexion.get_connection()
-    Conexion.get_cursor()
+    pass
 
 
