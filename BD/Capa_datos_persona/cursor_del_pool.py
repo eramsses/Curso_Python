@@ -20,7 +20,14 @@ class CursorDelPool:
             log.error(f"Ocurrio una exepción (Rollback): {valor_excepcion}")
         else:
             self.__conexion.commit()
-            log.debug("Commit de la transacción")
+            log.debug("Transacción exitosa (Commit)")
 
         self.__cursor.close()
         Conexion.liberarConexion(self.__conexion)
+
+if __name__ == "__main__":
+        with CursorDelPool() as cursor:
+            log.debug("Dentro del With")
+            cursor.execute("SELECT * FROM personas")
+            log.debug(cursor.fetchall())
+
