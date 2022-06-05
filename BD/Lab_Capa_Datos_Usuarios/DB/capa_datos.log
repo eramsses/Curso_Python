@@ -1,0 +1,8 @@
+12:05:38 AM: DEBUG [cursor_del_pool.py:11] Iniciando el With __enter__
+12:05:38 AM: DEBUG [Conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000018B3455BEE0>
+12:05:38 AM: DEBUG [Conexion.py:38] Conexión obtenida del pool: <connection object at 0x0000018B33F73CD0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+12:05:38 AM: DEBUG [cursor_del_pool.py:30] Dentro del With
+12:05:38 AM: DEBUG [cursor_del_pool.py:32] [(2, 'Marco', 'Flores', 'mflores@yopmail.com'), (3, 'Angel', 'Martinez', 'amartinez@yopmail.com'), (4, 'Maria', 'Gonzalez', 'arodriguez@yopmail.com'), (5, 'Maria', 'Esperanza', 'mesperanza@yopmail.com'), (7, 'Pedro', 'Najera', 'pnajera@yopmail.com'), (1, 'Marco Antonio', 'Flores Artica', 'mflores@yopmail.com')]
+12:05:38 AM: DEBUG [cursor_del_pool.py:17] Saliendo del With __exit__
+12:05:38 AM: DEBUG [cursor_del_pool.py:23] Transacción exitosa (Commit)
+12:05:38 AM: DEBUG [Conexion.py:44] Regresamos la conexión: <connection object at 0x0000018B33F73CD0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>

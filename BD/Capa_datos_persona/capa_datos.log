@@ -379,3 +379,15 @@
             Id Persona: 7, Nombre: Pedro,
             Apellido: Najera, Email: pnajera@yopmail.com
         
+12:08:04 AM: DEBUG [Persona.py:52] 
+            Id Persona: 1, Nombre: Juan,
+            Apellido: Perez, Email: jperez@yopmail.com
+        
+12:08:04 AM: DEBUG [Persona.py:56] 
+            Id Persona: None, Nombre: Juan,
+            Apellido: Perez, Email: jperez@yopmail.com
+        
+12:08:04 AM: DEBUG [Persona.py:60] 
+            Id Persona: 1, Nombre: None,
+            Apellido: None, Email: None
+        

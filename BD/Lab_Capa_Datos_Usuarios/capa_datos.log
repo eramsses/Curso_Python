@@ -1,0 +1,94 @@
+01:10:46 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 1
+01:10:46 AM: DEBUG [MenuAppUsuario.py:36] *********************Lista de Usuarios**********************
+01:10:46 AM: DEBUG [cursor_del_pool.py:11] Iniciando el With __enter__
+01:10:46 AM: DEBUG [Conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001263CC3FE80>
+01:10:46 AM: DEBUG [Conexion.py:38] Conexión obtenida del pool: <connection object at 0x000001263C623DE0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+01:10:46 AM: DEBUG [cursor_del_pool.py:17] Saliendo del With __exit__
+01:10:46 AM: DEBUG [cursor_del_pool.py:23] Transacción exitosa (Commit)
+01:10:46 AM: DEBUG [Conexion.py:44] Regresamos la conexión: <connection object at 0x000001263C623DE0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+01:10:46 AM: DEBUG [MenuAppUsuario.py:39] 
+            Id_usuario: 1, 
+            Usuario: jperez, 
+            Contraseña: 123
+        
+01:10:46 AM: DEBUG [MenuAppUsuario.py:39] 
+            Id_usuario: 2, 
+            Usuario: kgomez, 
+            Contraseña: 456
+        
+01:11:25 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 5
+01:11:32 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 1
+01:11:32 AM: DEBUG [cursor_del_pool.py:11] Iniciando el With __enter__
+01:11:32 AM: DEBUG [Conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001690C5FFE80>
+01:11:32 AM: DEBUG [Conexion.py:38] Conexión obtenida del pool: <connection object at 0x000001690BBD3CD0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+01:11:32 AM: DEBUG [cursor_del_pool.py:17] Saliendo del With __exit__
+01:11:32 AM: DEBUG [cursor_del_pool.py:23] Transacción exitosa (Commit)
+01:11:32 AM: DEBUG [Conexion.py:44] Regresamos la conexión: <connection object at 0x000001690BBD3CD0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+01:11:32 AM: DEBUG [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:11:32 AM: DEBUG [MenuAppUsuario.py:40] 
+            Id_usuario: 1, 
+            Usuario: jperez, 
+            Contraseña: 123
+        
+01:11:32 AM: DEBUG [MenuAppUsuario.py:40] 
+            Id_usuario: 2, 
+            Usuario: kgomez, 
+            Contraseña: 456
+        
+01:16:00 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 5
+01:18:53 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 1
+01:18:53 AM: DEBUG [cursor_del_pool.py:11] Iniciando el With __enter__
+01:18:53 AM: DEBUG [Conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001B8E52ABA00>
+01:18:53 AM: DEBUG [Conexion.py:38] Conexión obtenida del pool: <connection object at 0x000001B8E4903DE0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+01:18:53 AM: DEBUG [cursor_del_pool.py:17] Saliendo del With __exit__
+01:18:53 AM: DEBUG [cursor_del_pool.py:23] Transacción exitosa (Commit)
+01:18:53 AM: DEBUG [Conexion.py:44] Regresamos la conexión: <connection object at 0x000001B8E4903DE0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+01:18:53 AM: DEBUG [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:18:53 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:18:53 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:20:43 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 1
+01:20:43 AM: DEBUG [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:20:43 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:20:43 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:22:12 AM: DEBUG [MenuAppUsuario.py:33] Opción seleccionada: 5
+01:22:28 AM: INFO [MenuAppUsuario.py:33] Opción seleccionada: 2
+01:22:28 AM: INFO [MenuAppUsuario.py:45] **********************Insertar usuario**********************
+01:24:53 AM: DEBUG [UsuarioDAO.py:29] Usuario a insertar: Id_usuario: None, Usuario: pnajera, Contraseña: 87655
+01:24:53 AM: DEBUG [UsuarioDAO.py:33] Usuario insertado: Id_usuario: None, Usuario: pnajera, Contraseña: 87655
+01:24:53 AM: INFO [MenuAppUsuario.py:51] Usuarios insertados: 1
+01:26:00 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:26:00 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:26:00 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:26:00 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pnajera, Contraseña: 87655
+01:26:24 AM: INFO [MenuAppUsuario.py:64] Usuarios actualizados: 1
+01:26:50 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:26:50 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:26:50 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:26:50 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543
+01:27:02 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:27:02 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:27:02 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:27:02 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543
+01:27:17 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:27:17 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:27:17 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:27:17 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543
+01:27:24 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:27:24 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:27:24 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:27:24 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543
+01:27:31 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:27:31 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:27:31 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:27:31 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543
+01:27:42 AM: INFO [MenuAppUsuario.py:51] Usuarios insertados: 1
+01:27:46 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:27:46 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:27:46 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:27:46 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543
+01:27:46 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 5, Usuario: nuevo, Contraseña: 987698asd
+01:27:53 AM: DEBUG [MenuAppUsuario.py:73] Usuarios eliminados: 1
+01:27:58 AM: INFO [MenuAppUsuario.py:38] *********************Lista de Usuarios**********************
+01:27:58 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 1, Usuario: jperez, Contraseña: 123
+01:27:58 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 2, Usuario: kgomez, Contraseña: 456
+01:27:58 AM: DEBUG [MenuAppUsuario.py:40] Id_usuario: 4, Usuario: pcaceres, Contraseña: 876543

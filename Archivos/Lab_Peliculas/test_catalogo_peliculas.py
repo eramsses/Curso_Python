@@ -9,7 +9,7 @@ op = 0
 
 def menu():
     borrarPantalla()
-    print("LABORARIO PELÍCULAS".center(60,"*"))
+    print("LABORATORIO PELÍCULAS".center(60,"*"))
     print("1. Agregar película")
     print("2. Listar películas")
     print("3. Eliminar catalogo de películas")
